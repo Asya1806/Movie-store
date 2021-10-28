@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kanema</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kanema</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="container">
+            <p class="float-end"><a href="#"><ya-tr-span data-index="29-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Back to top" data-translation="Наверх" data-type="trSpan" data-selected="false">Наверх</ya-tr-span></a></p>
+            <p><ya-tr-span data-index="30-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="© 2017–2021 Company, Inc. · " data-translation="© 2017-2021 Компания, Inc. · " data-type="trSpan" data-selected="false">© 2017-2021 Компания, Inc. · </ya-tr-span><a href="#"><ya-tr-span data-index="30-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Privacy" data-translation="Конфиденциальность" data-type="trSpan" data-selected="false">Конфиденциальность</ya-tr-span></a><ya-tr-span data-index="30-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value=" · " data-translation=" · " data-type="trSpan" data-selected="false"> · </ya-tr-span><a href="#"><ya-tr-span data-index="30-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Terms" data-translation="Условия" data-type="trSpan" data-selected="false">Условия</ya-tr-span></a></p>
+        </footer>*@
+
+
+
+    <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Kanema - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
